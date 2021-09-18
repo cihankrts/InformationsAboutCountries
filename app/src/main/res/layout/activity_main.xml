@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/back1">
+
+    <LinearLayout
+        android:id="@+id/flags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/IVturkey"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/turkey"
+            android:clickable="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text=" / "
+            android:textColor="@color/newColor"/>
+        <ImageView
+            android:id="@+id/IVuk"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/uk"
+            android:layout_marginRight="15dp"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_below="@+id/webView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="40dp"
+        android:text="DenemeWelcome"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <Spinner
+        android:id="@+id/spinnerCountries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/txtInfo"
+        android:layout_marginTop="30dp">
+    </Spinner>
+
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/flags"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@android:color/transparent">
+
+    </WebView>
+
+    <TextView
+        android:id="@+id/txtselectedCountryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerCountries"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="deneme"
+        android:layout_marginLeft="15dp"/>
+
+    <RelativeLayout
+        android:id="@+id/RLButtons"
+        android:layout_below="@+id/txtselectedCountryName"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <Button
+            android:id="@+id/btnA"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/myYellow"
+            android:text="A"
+            android:textColor="@color/myBlue" />
+
+        <Button
+            android:id="@+id/btnB"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myYellow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/myBlue"
+            android:text="B"/>
+
+        <Button
+            android:id="@+id/btnC"
+            android:layout_below="@+id/btnA"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myYellow"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/myBlue"
+            android:text="C"/>
+
+        <Button
+            android:id="@+id/btnD"
+            android:layout_below="@+id/btnB"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myYellow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/myBlue"
+            android:text="D"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:layout_below="@+id/RLButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/txtPoint1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puanınız: "
+            android:textColor="@color/white"
+            android:gravity="left"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtPoint2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="deneme"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="200dp"/>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/txtDeveloperName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="10dp"
+        android:text="Developed by Cihan Karataş"
+        android:textStyle="normal"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
